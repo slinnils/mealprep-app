@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+*{
+    box-sizing: border-box;
+}
+
+input {
+    border: 1px solid black;
+}
+
+.button{
+    border: 1px solid salmon;
+    background-color: lightblue;
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
