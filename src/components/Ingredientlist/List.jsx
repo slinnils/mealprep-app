@@ -54,7 +54,7 @@ export default function List() {
                 </button>
                 <button
                   onClick={() => handleEditItem(ing)}
-                  className="border border-amber-600 rounded-xl px-2 py-1"
+                  className="button"
                 >
                   Bearbeiten
                 </button>

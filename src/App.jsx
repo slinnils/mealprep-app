@@ -1,7 +1,11 @@
-import IngredientForm from "./components/Ingredientlist/IngredientForm.jsx"
+import IngredientForm from "./components/Ingredientlist/IngredientForm.jsx";
+import RecipeForm from "./components/recipes/RecipeForm.jsx";
 
-export default function App(){
-  return(
-    <IngredientForm />
-  )
+export default function App() {
+  return (
+    <>
+      <IngredientForm />
+      <RecipeForm />
+    </>
+  );
 }
