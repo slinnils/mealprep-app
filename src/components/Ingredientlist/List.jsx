@@ -24,7 +24,7 @@ export default function List() {
       name: editItem.name,
       currentStock: editItem.currentStock,
       unit: editItem.unit,
-      minStock: editItem.minStock,
+      minStock: editItem.minStock ?? "",
     });
     setEditItem(editItem.id);
   }

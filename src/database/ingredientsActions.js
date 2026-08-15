@@ -40,3 +40,17 @@ export async function handleSaveEdit(event, editIngValues, editItem) {
 export function useDisplayDbEntries() {
   return useLiveQuery(() => db.ingredients.toArray());
 }
+
+
+export async function addQuickIngredient(name) {
+  if (!name.trim()) return null;
+
+  const newId = await db.ingredients.add({
+    name,
+    currentStock: 0,
+    unit: "g",
+    minStock: 0,
+  });
+
+  return newId;
+}
