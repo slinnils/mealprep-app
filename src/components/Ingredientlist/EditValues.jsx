@@ -1,4 +1,4 @@
-import { handleSaveEdit } from "./ingredientActions";
+import { handleSaveEdit } from "../../database/ingredientsActions";
 
 export default function EditValues({
   editIngValues,
@@ -15,14 +15,14 @@ export default function EditValues({
       }}
     >
       <input
-        value={editIngValues.name}
+        value={editIngValues?.name}
         onChange={(e) => onInputChange("name", e.target.value)}
       />
       <input
         className="w-15 px-1"
         type="number"
         step="0.1"
-        value={editIngValues.currentStock}
+        value={editIngValues?.currentStock}
         onChange={(e) => onInputChange("currentStock", e.target.value)}
       />
 
@@ -30,14 +30,14 @@ export default function EditValues({
         className="w-15 px-1"
         type="number"
         step="0.1"
-        value={editIngValues.minStock}
+        value={editIngValues?.minStock}
         onChange={(e) => onInputChange("minStock", e.target.value)}
       />
       <select
         className="border"
         name="unit"
         id=""
-        value={editIngValues.unit}
+        value={editIngValues?.unit}
         onChange={(e) => onInputChange("unit", e.target.value)}
       >
         <option value="g">g</option>

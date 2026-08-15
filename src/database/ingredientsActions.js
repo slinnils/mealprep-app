@@ -1,4 +1,4 @@
-import { db } from "../../database/db.js";
+import { db } from "./db.js";
 import { useLiveQuery } from "dexie-react-hooks";
 
 export async function ingredientsAction(formData) {

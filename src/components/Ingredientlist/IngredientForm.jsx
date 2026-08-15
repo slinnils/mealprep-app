@@ -1,5 +1,5 @@
 import List from "./List.jsx";
-import { ingredientsAction } from "../Ingredientlist/ingredientActions.js";
+import { ingredientsAction } from "../../database/ingredientsActions.js";
 
 export default function IngredientForm() {
   return (

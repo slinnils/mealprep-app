@@ -1,4 +1,4 @@
-import { handleDelete, useDisplayDbEntries } from "./ingredientActions.js";
+import { handleDelete, useDisplayDbEntries } from "../../database/ingredientsActions.js";
 import { useState } from "react";
 import EditValues from "./EditValues.jsx";
 
