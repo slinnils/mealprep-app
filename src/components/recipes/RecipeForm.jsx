@@ -50,7 +50,7 @@ export default function RecipeForm() {
           event.preventDefault();
           const formData = new FormData(event.target);
           addRecipe(formData, selectedIngredients);
-          setSelectedIngredients([])
+          setSelectedIngredients([]);
           event.target.reset();
         }}
       >
@@ -62,6 +62,11 @@ export default function RecipeForm() {
         />
 
         <ul>
+          <div className="flex justify-between">
+            <p>Zutaten:</p>
+            <p>Verfügbare Mengen:</p>
+          </div>
+          <hr className="my-3" />
           {ingredientList?.map((ing) => (
             <li key={ing.id}>
               <div className="flex gap-3">

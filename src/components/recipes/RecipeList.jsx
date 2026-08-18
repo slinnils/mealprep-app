@@ -6,13 +6,10 @@ export default function RecipeList({ ingredientList }) {
   return (
     <ul>
       {recipes?.map((recipe) => (
-        <li className="border" key={recipe.id}>
-          <p>{recipe.name}</p>
-          <p>{recipe.instructions}</p>
-          <p>
-            {recipe.servings} {recipe.servings === 1 ? "Portion" : "Portionen"}
-          </p>
+        <li className="border px-5 py-2" key={recipe.id}>
+          <h3 className="text-2xl font-semibold">{recipe.name}</h3>
           <ul>
+            <h4 className="text-xl">Zutaten:</h4>
             {recipe.ingredients?.map((item) => {
               const ingredient = ingredientList.find(
                 (ing) => ing.id === item.ingredientId,
@@ -24,7 +21,14 @@ export default function RecipeList({ ingredientList }) {
               );
             })}
           </ul>
-          <button onClick={() => handleDelete(recipe.id)} className="button">DELETE</button>
+          <div className="my-8">
+            <h4 className="text-xl">Zubereitung:</h4>
+            <p>{recipe.instructions}</p>
+          </div>
+
+          <button onClick={() => handleDelete(recipe.id)} className="button">
+            Rezept löschen
+          </button>
         </li>
       ))}
     </ul>
