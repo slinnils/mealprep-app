@@ -1,4 +1,5 @@
 import { handleDeletePlanEntry } from "../../database/planActions.js";
+import { markAsCooked } from "../../database/planActions.js";
 
 export default function DayCard({
   date,
@@ -39,6 +40,7 @@ export default function DayCard({
               <button onClick={() => handleDeletePlanEntry(entry.id)} className="button">
                 Löschen
               </button>
+              <button onClick={() => markAsCooked(entry)} className="button">Rezept wurde gekocht</button>   
             </div>
           );
         })
